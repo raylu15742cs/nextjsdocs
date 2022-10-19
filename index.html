@@ -1,13 +1,16 @@
-<!-- index.html -->
-<html>
-  <body>
-    <div id="app"></div>
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
 
-    <script type="text/javascript">
-      const app = document.getElementById('app');
-    </script>
-  </body>
-</html>
+      <button>Like</button>
+    </div>
+  );
+}
